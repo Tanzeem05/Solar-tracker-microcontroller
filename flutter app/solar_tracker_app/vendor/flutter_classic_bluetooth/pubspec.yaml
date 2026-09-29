@@ -1,0 +1,48 @@
+name: flutter_classic_bluetooth
+description: "Bluetooth Classic (RFCOMM/SPP) serial plugin for Flutter. Discover, pair and connect to ESP32, Arduino, HC-05 and thermal printers on Android, Windows, macOS, Linux, iOS."
+version: 1.5.0
+homepage: https://github.com/almasumdev/flutter_classic_bluetooth
+repository: https://github.com/almasumdev/flutter_classic_bluetooth
+issue_tracker: https://github.com/almasumdev/flutter_classic_bluetooth/issues
+documentation: https://flutter-classic-bluetooth.web.app
+
+topics:
+  - bluetooth
+  - bluetooth-classic
+  - serial
+  - printer
+  - iot
+
+screenshots:
+  - description: The flutter_classic_bluetooth logo.
+    path: images/logo.png
+
+environment:
+  # kotlin.compilerOptions needs KGP 2.0, which Flutter only guarantees from 3.44.
+  sdk: '>=3.12.0 <4.0.0'
+  flutter: '>=3.44.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.flutter_classic_bluetooth.flutter_classic_bluetooth
+        pluginClass: FlutterClassicBluetoothPlugin
+      ios:
+        pluginClass: FlutterClassicBluetoothPlugin
+      linux:
+        pluginClass: FlutterClassicBluetoothPlugin
+      macos:
+        pluginClass: FlutterClassicBluetoothPlugin
+      windows:
+        pluginClass: FlutterClassicBluetoothPluginCApi
